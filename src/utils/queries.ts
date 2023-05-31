@@ -2,20 +2,12 @@ export const unauthorizedRequest = async (url: string, method: string, body?: ob
   const request: object = body
     ? {
         method: method,
-        headers: {
-          'Content-Type': 'application/json',
-        },
+
         body: JSON.stringify(body),
       }
     : {
         method: method,
-        headers: {
-          'Content-Type': 'application/json',
-        },
       };
-
-  console.log(body);
-  console.log(request);
 
   const response = await fetch(url, request);
 
