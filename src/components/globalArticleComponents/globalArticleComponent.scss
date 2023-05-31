@@ -1,0 +1,22 @@
+.global-article {
+  display: grid;
+  grid-gap: 0.5vw;
+}
+
+@media (min-width: 992px) {
+  .global-article {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .global-article {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .global-article {
+    grid-template-columns: 1fr;
+  }
+}
