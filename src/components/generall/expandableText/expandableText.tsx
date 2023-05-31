@@ -1,6 +1,7 @@
 import React, { FC, useState } from 'react';
 import './expandableText.scss';
-const ExpandableText: FC<{ text: string; length: number }> = ({ text, length }) => {
+import { expandableTextProps } from './expandableText.type';
+const ExpandableText: FC<expandableTextProps> = ({ text, length }) => {
   const [expanded, setExpanded] = useState(false);
 
   const toggleExpansion = () => {
